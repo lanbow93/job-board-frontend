@@ -1,38 +1,42 @@
-.App {
-  text-align: center;
+nav {
+  background-color: lightblue;
+  height: 2rem;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.jobCardHolder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.jobCard {
+  border-style: solid;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.innerCard {
+  padding: 0 0 1rem 1rem;
+}
+
+.cardLabel {
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 800px){
+  .jobCardHolder {
+    grid-template-columns: 1fr 1fr 1fr;
   }
+	
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media only screen and (max-width: 600px){
+	.jobCardHolder {
+    grid-template-columns: .75fr;
+    justify-content: center ;
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
   }
 }

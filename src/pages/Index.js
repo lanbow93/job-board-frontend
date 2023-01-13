@@ -1,18 +1,15 @@
 import { useLoaderData } from "react-router-dom"
+import JobCard from "../components/JobCard"
 
 function Index(props) {
     const postings = useLoaderData()
     console.log(postings)
-    return <div>
+    return <div className="jobCardHolder">
         {postings.map((post) => {
             return <div key={post._id} className="jobCard">
-                <h1>Job Title: {post.title}</h1>
-                
-
-
+                <JobCard data={post} />
             </div>   
         })}
-        {console.log(postings)}
     </div>
 }
 
