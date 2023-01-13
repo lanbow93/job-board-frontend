@@ -1,4 +1,4 @@
-const URL = process.env.REACT_APP_APIURL
+const URL = "https://job-board-backend-jryb.onrender.com"
 
 export const postingLoader = async () => {
     const response = await fetch(URL + "/user")
