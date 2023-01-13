@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom"
 
 function JobCard(props) {
-    console.log(props)
     return <div className="innerCard">
         <p><span className="cardLabel">Position:</span> {props.data.title}</p>
         <p><span className="cardLabel">Company:</span> {props.data.companyName}</p>

@@ -6,7 +6,9 @@ export const postingLoader = async () => {
     return posts
 }
 
-
-
-
+export const postLoader = async ({params}) => {
+    const response = await fetch(URL + "/user/" + params.id)
+    const post = await response.json()
+    return post
+} 
 
