@@ -102,7 +102,11 @@ nav {
   .detailedPost {
     grid-template-columns: 1fr;
   }
-  .heading {
+  .heading, .perks, .jobDescription, .perks h3 {
     grid-column: span 1;
+    
+  }
+  .perks {
+    grid-template-columns: 1fr;
   }
 }

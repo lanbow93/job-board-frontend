@@ -34,8 +34,9 @@ function Show(props) {
         <div className="perks">
             <h3 className="centerTitle">Perks</h3>
             <div className="innerPerksLeft">
+            <p className="centerTitle cardLabel">Benefits</p>
                 <ul>
-                    <p className="centerTitle cardLabel">Benefits</p>
+    
                     {post.benefits.map(benefit => {
                       return <li key={post.benefits.indexOf(benefit)}>{benefit}</li>  
                     })}
