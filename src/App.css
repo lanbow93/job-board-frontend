@@ -17,8 +17,10 @@ nav {
 .jobCard {
   border-style: solid;
   border-radius: 20px;
+  background-color: #F5F5F5;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
 
 /*  Styling inside of the job card */
 .innerCard {
@@ -56,7 +58,7 @@ nav {
   
 }
 
-.about, .perks, .jobDescription {
+.about, .perks, .jobDescription, .split {
   border-style: solid;
   border-radius: 20px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
@@ -70,7 +72,7 @@ nav {
   grid-template-columns: 1fr 1fr;
 }
 
-.perks h3 {
+.perks h3, .split h4, .split textarea {
   grid-column: span 2;
 }
 .centerTitle{
@@ -85,6 +87,44 @@ nav {
 .buttonLink {
   text-align: center;
 }
+
+
+/* Job Application Page */
+.applicationFormPage {
+  display: flex;
+  justify-content: center;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 20rem 20rem;
+  justify-content: center;
+  width: 50rem;
+  margin-top: 2rem;
+}
+
+.split input {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.split input[type="submit"] {
+  grid-column: span 2;
+  margin-top: 1rem;
+  width: 50%;
+  justify-self: center;
+  background-color: lightblue;
+  border-style: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.required {
+  font-weight: bold;
+}
+
+
+
 
 @media only screen and (max-width: 800px){
   .jobCardHolder {
@@ -102,11 +142,20 @@ nav {
   .detailedPost {
     grid-template-columns: 1fr;
   }
-  .heading, .perks, .jobDescription, .perks h3 {
+  .heading, .perks, .jobDescription, .perks h3, .split textarea, .split h4, .split input[type="submit"] {
     grid-column: span 1;
     
   }
-  .perks {
+  .perks, .split {
     grid-template-columns: 1fr;
   }
+
+  .split {
+    padding-right: 1rem;
+  }
+
+  .split input[type="submit"] {
+    width: 60%;
+  }
+
 }

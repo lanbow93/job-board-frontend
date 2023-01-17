@@ -52,7 +52,7 @@ function Show(props) {
             <h3 className="centerTitle">Description</h3>
             <p>{post.description}</p>
             <div className="buttonLink">
-                <Link to={`/users/${post._id}/apply`}><button>Apply Here</button></Link>
+                <Link to={`/users/${post._id}/apply?title=${post.title}&company=${post.companyName}`}><button>Apply Here</button></Link>
             </div>
         </div>
     </div>
