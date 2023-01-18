@@ -1,14 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
 import { Outlet } from 'react-router-dom';
 import Nav from './components/Nav';
+import { useState } from 'react';
 
 function App() {
-  let isUser = true;
+
+  const [pageDetails, setPageDetails] = useState({
+    homeUrl: "/users",
+    accessUrl: "/",
+    switchText: "Recruiters",
+    accessText: "Submitted Applications"
+  })
 
   return (
     <div className="App">
-      <Nav home={isUser ? "/users" : "/recruiters" } />
+      <Nav home={pageDetails.homeUrl} switchText={pageDetails.switchText} accessText={pageDetails.accessText} switchDetails={setPageDetails} />
       <Outlet/>
     </div>
   );

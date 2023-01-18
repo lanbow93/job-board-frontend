@@ -11,10 +11,12 @@ import { postingLoader, postLoader } from './loaders';
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<App/>}>
+            <Route path=''/>
             <Route path='/users' element={<Index />} loader={postingLoader} />
             <Route path='/users/:id' element={<Show />} loader={postLoader} />
             <Route path='/users/:id/apply' element={<NewAppForm/>}/>
             <Route path='/create/users' action={createApplicationAction}/>
+            <Route path='/recruiters' />
         </Route>
     )
 )
