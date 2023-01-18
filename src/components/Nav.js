@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, redirect } from "react-router-dom"
 
 let isSeeker = true
 
@@ -9,24 +9,30 @@ function Nav(props){
             isSeeker=false;
             props.switchDetails({
                 homeUrl: "/recruiters",
-                accessUrl: "/",
+                homeText: "Applications Submitted",
+                switchUrl: "/users",
                 switchText: "Job Seekers",
+                accessUrl: "/",
                 accessText: "Submitted Job Postings"
             })
+            return redirect("/recruiters")
         } else {
             isSeeker=true;
             props.switchDetails({
                 homeUrl: "/users",
-                accessUrl: "/",
+                homeText: "Job Postings",
+                switchUrl: "/recruiters",
                 switchText: "Recruiters",
+                accessUrl: "/",
                 accessText: "Submitted Applications"
             })
+            return redirect("/users")
         }
     }
 
     return <nav>
-        <Link to={props.home}>Home</Link>
-        <Link onClick={changeUserType} to={props.home} >{props.switchText}</Link>
+        <Link to={props.home}>{props.homeText}</Link>
+        <Link onClick={changeUserType} to={props.switchUrl}>{props.switchText}</Link>
         <Link to={props.home}>{props.accessText}</Link>
     </nav>
 }
