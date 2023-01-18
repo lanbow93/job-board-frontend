@@ -10,13 +10,13 @@ function App() {
     homeText: "Job Postings",
     switchUrl: "/recruiters",
     switchText: "Recruiters",
-    accessUrl: "/",
+    accessUrl: "/jsapplications",
     accessText: "Submitted Applications"
   })
 
   return (
     <div className="App">
-      <Nav home={pageDetails.homeUrl} homeText={pageDetails.homeText} switchUrl={pageDetails.switchUrl} switchText={pageDetails.switchText} accessText={pageDetails.accessText} switchDetails={setPageDetails} />
+      <Nav home={pageDetails.homeUrl} homeText={pageDetails.homeText} switchUrl={pageDetails.switchUrl} switchText={pageDetails.switchText} accessURL={pageDetails.accessUrl} accessText={pageDetails.accessText} switchDetails={setPageDetails} />
       <Outlet testOut={pageDetails.accessText} />
     </div>
   );

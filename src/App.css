@@ -17,7 +17,7 @@ nav a{
 }
 
 /* Job Postings Index Styling */
-.jobCardHolder {
+.jobCardHolder, .applicationHolder {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   row-gap: 1rem;
@@ -25,7 +25,7 @@ nav a{
   padding: 1rem;
 }
 
-.jobCard {
+.jobCard, .applicationCard {
   border-style: solid;
   border-radius: 20px;
   background-color: #F5F5F5;

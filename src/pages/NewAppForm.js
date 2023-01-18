@@ -1,8 +1,16 @@
 import { Form, useParams } from "react-router-dom"
+import { useState } from "react"
 
 function NewAppForm(props){
     const queries = new URLSearchParams(window.location.search)
     const {id} = useParams()
+    const [formInfo, setFormInfo] = useState ({
+        name: "",
+        email: "",
+
+    })
+
+
     return <div className="applicationFormPage">
         
 

@@ -12,3 +12,8 @@ export const postLoader = async ({params}) => {
     return post
 } 
 
+export const applicationsLoader = async () => {
+    const response = await fetch(URL + "/recruit")
+    const applications = await response.json()
+    return applications
+}

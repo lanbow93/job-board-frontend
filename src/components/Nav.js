@@ -12,7 +12,7 @@ function Nav(props){
                 homeText: "Applications Submitted",
                 switchUrl: "/users",
                 switchText: "Job Seekers",
-                accessUrl: "/",
+                accessUrl: "/rapplications",
                 accessText: "Submitted Job Postings"
             })
             return redirect("/recruiters")
@@ -23,7 +23,7 @@ function Nav(props){
                 homeText: "Job Postings",
                 switchUrl: "/recruiters",
                 switchText: "Recruiters",
-                accessUrl: "/",
+                accessUrl: "/jsapplications",
                 accessText: "Submitted Applications"
             })
             return redirect("/users")
@@ -33,7 +33,7 @@ function Nav(props){
     return <nav>
         <Link to={props.home}>{props.homeText}</Link>
         <Link onClick={changeUserType} to={props.switchUrl}>{props.switchText}</Link>
-        <Link to={props.home}>{props.accessText}</Link>
+        <Link to={props.accessURL}>{props.accessText}</Link>
     </nav>
 }
 
