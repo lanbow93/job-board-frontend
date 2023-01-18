@@ -138,14 +138,14 @@ nav a{
 
 
 @media only screen and (max-width: 800px){
-  .jobCardHolder {
+  .jobCardHolder, .applicationHolder {
     grid-template-columns: 1fr 1fr 1fr;
   }
 	
 }
 
 @media only screen and (max-width: 600px){
-	.jobCardHolder {
+	.jobCardHolder, .applicationHolder {
     grid-template-columns: .75fr;
     justify-content: center ;
 
