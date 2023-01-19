@@ -5,7 +5,7 @@ function SeekerApplicationShow(props){
     return <div className="applicationFormPage">
         
 
-    <Form action="/create/users" method="post" className="split">
+    <Form action={`/jsapplications/${application._id}/update`} method="post" className="split">
         <h4 className="centerTitle">Update Application</h4>
         <label className="required">Name: </label>
         <input type="text" name="name" placeholder="John Smith" defaultValue={application.name} />
@@ -16,7 +16,7 @@ function SeekerApplicationShow(props){
         <label >LinkedIn URL: </label>
         <input type="text" name="linkedin" placeholder="linkedinurl.com" defaultValue={application.linkedin}/>
         <label className="required"> Resume: </label><br />
-        <textarea rows="10" cols="100" name="resume">{application.resume}</textarea>
+        <textarea rows="10" cols="100" name="resume" defaultValue={application.resume} />
         <input type="hidden" value={application.postID} name="postID"/>
         <input type="submit" value="Submit Application" />
         <p>Bolded Items are <span className="required">REQUIRED</span></p>

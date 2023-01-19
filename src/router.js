@@ -4,7 +4,7 @@ import Index from './pages/Index';
 import Show from './pages/Show';
 import NewAppForm from './pages/NewAppForm';
 import ApplicationIndex from './pages/ApplicationIndex';
-import { createApplicationAction } from './actions';
+import { createApplicationAction, updateApplicationAction } from './actions';
 
 import { postingLoader, postLoader, applicationsLoader, applicationLoader } from './loaders';
 import SeekerApplicationShow from './pages/SeekerApplicationShow';
@@ -20,7 +20,8 @@ const router = createBrowserRouter(
             <Route path='/create/users' action={createApplicationAction}/>
             <Route path='/recruiters' />
             <Route path='/jsapplications' element={<ApplicationIndex />} loader={applicationsLoader}/>
-            <Route path='/jsapplications/:id' loader={applicationLoader} element={<SeekerApplicationShow />} />
+            <Route path='/jsapplications/:id/edit' loader={applicationLoader} element={<SeekerApplicationShow />} />
+            <Route path='/jsapplications/:id/update' action={updateApplicationAction} />
         </Route>
     )
 )

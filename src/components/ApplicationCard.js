@@ -6,7 +6,7 @@ function ApplicationCard(props) {
         <p><span className="cardLabel">Submitted:</span> {dateConverter(props.data.createdAt)}</p>
         <p><span className="cardLabel">Name:</span> {props.data.name}</p>
         <p><span className="cardLabel">Job ID:</span> {props.data.postID}</p>
-        <Link to={`/jsapplications/${props.data._id}`}>Edit Application</Link>
+        <Link to={`/jsapplications/${props.data._id}/edit`}>Edit Application</Link>
     </div>
 }
 
