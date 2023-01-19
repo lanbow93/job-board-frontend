@@ -1,5 +1,5 @@
 import { Form } from "react-router-dom"
-import { useLoaderData } from "react-router-dom"
+import { useLoaderData, Link } from "react-router-dom"
 function SeekerApplicationShow(props){
     const application = useLoaderData()
     return <div className="applicationFormPage">
@@ -18,9 +18,9 @@ function SeekerApplicationShow(props){
         <label className="required"> Resume: </label><br />
         <textarea rows="10" cols="100" name="resume" defaultValue={application.resume} />
         <input type="hidden" value={application.postID} name="postID"/>
-        <input type="submit" value="Submit Application" />
+        <input type="submit" value="Update Application" />
         <p>Bolded Items are <span className="required">REQUIRED</span></p>
-        <p>Job ID: {application.postID}</p>
+        <p>Job ID: <Link to={`/users/${application.postID}`}>{application.postID}</Link></p>
         
     </Form>
     
