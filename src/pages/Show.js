@@ -5,12 +5,6 @@ import {dateConverter} from "../functions/dateConverter"
 function Show(props) {
     // https://www.google.com/maps/place/ + {address} 
     const post = useLoaderData()
-    console.log(post)
-
-    // const date = new Date(post.createdAt)
- 
-    // const formattedDate = date.toLocaleString('default', { month: 'long' }) + " " + date.getDate() +  ", " + date.getFullYear()
-    // console.log(formattedDate)
 
     return <div className="detailedPost">
         <div className="heading">
