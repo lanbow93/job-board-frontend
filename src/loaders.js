@@ -17,3 +17,9 @@ export const applicationsLoader = async () => {
     const applications = await response.json()
     return applications
 }
+
+export const applicationLoader = async({params}) => {
+    const response = await fetch(`${URL}/recruit/${params.id}`);
+    const application = await response.json()
+    return application;
+}

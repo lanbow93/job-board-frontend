@@ -1,15 +1,16 @@
 import { useLoaderData } from "react-router-dom";
 import { Link } from "react-router-dom";
+import {dateConverter} from "../functions/dateConverter"
 
 function Show(props) {
     // https://www.google.com/maps/place/ + {address} 
     const post = useLoaderData()
     console.log(post)
 
-    const date = new Date(post.createdAt)
+    // const date = new Date(post.createdAt)
  
-    const formattedDate = date.toLocaleString('default', { month: 'long' }) + " " + date.getDate() +  ", " + date.getFullYear()
-    console.log(formattedDate)
+    // const formattedDate = date.toLocaleString('default', { month: 'long' }) + " " + date.getDate() +  ", " + date.getFullYear()
+    // console.log(formattedDate)
 
     return <div className="detailedPost">
         <div className="heading">
@@ -28,7 +29,7 @@ function Show(props) {
         <div className="about">
             <p><span className="cardLabel">Job-Type:</span> {post.jobType}</p>
             <p><span className="cardLabel">Schedule:</span> {post.shift}</p>
-            <p><span className="cardLabel">Job Posted:</span> {formattedDate}</p>
+            <p><span className="cardLabel">Job Posted:</span> {dateConverter(post.createdAt)}</p>
     
         </div>
         <div className="perks">

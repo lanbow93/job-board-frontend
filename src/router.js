@@ -6,7 +6,8 @@ import NewAppForm from './pages/NewAppForm';
 import ApplicationIndex from './pages/ApplicationIndex';
 import { createApplicationAction } from './actions';
 
-import { postingLoader, postLoader, applicationsLoader } from './loaders';
+import { postingLoader, postLoader, applicationsLoader, applicationLoader } from './loaders';
+import SeekerApplicationShow from './pages/SeekerApplicationShow';
 
 
 const router = createBrowserRouter(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
             <Route path='/create/users' action={createApplicationAction}/>
             <Route path='/recruiters' />
             <Route path='/jsapplications' element={<ApplicationIndex />} loader={applicationsLoader}/>
+            <Route path='/jsapplications/:id' loader={applicationLoader} element={<SeekerApplicationShow />} />
         </Route>
     )
 )
