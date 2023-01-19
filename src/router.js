@@ -8,12 +8,13 @@ import { createApplicationAction, updateApplicationAction } from './actions';
 
 import { postingLoader, postLoader, applicationsLoader, applicationLoader } from './loaders';
 import SeekerApplicationShow from './pages/SeekerApplicationShow';
+import Landing from './pages/Landing';
 
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<App/>}>
-            <Route path=''/>
+            <Route path='' element={<Landing />}/>
             <Route path='/users' element={<Index />} loader={postingLoader} />
             <Route path='/users/:id' element={<Show />} loader={postLoader} />
             <Route path='/users/:id/apply' element={<NewAppForm/>}/>
