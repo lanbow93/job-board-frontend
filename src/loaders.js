@@ -1,4 +1,4 @@
-const URL = "http://localhost:4567"
+const URL = "https://job-board-backend-jryb.onrender.com"
 
 export const postingLoader = async () => {
     const response = await fetch(URL + "/user")
