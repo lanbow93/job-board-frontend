@@ -6,7 +6,7 @@ function ApplicationIndex(props) {
     return <div className="applicationHolder">
         {applications.map((application) => {
             return <div key={application._id} className="applicationCard">
-                <ApplicationCard data={application} />
+                <ApplicationCard data={application} isUser={props.isUser} />
             </div>
         })}
     </div>

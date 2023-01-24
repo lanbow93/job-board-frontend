@@ -1,10 +1,13 @@
 import { useLoaderData } from "react-router-dom"
 import RecruiterJobCard from "../components/RecruiterJobCard"
 
-function Index(props) {
+function RecruiterIndex(props) {
     const postings = useLoaderData()
+
+
     return <div className="jobCardHolder">
         {postings.map((post) => {
+            console.log(post)
             return <div key={post._id} className="jobCard">
                 <RecruiterJobCard data={post} />
             </div>   
@@ -12,4 +15,4 @@ function Index(props) {
     </div>
 }
 
-export default Index
+export default RecruiterIndex

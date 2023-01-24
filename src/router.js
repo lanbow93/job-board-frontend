@@ -8,7 +8,7 @@ import NewAppForm from './pages/NewAppForm';
 import ApplicationIndex from './pages/ApplicationIndex';
 import { createApplicationAction, updateApplicationAction } from './actions';
 
-import { postingLoader, postLoader, applicationsLoader, applicationLoader } from './loaders';
+import { postingLoader, postLoader, applicationsLoader, applicationLoader, specificApplicationLoader } from './loaders';
 import SeekerApplicationShow from './pages/SeekerApplicationShow';
 import Landing from './pages/Landing';
 
@@ -23,8 +23,9 @@ const router = createBrowserRouter(
             <Route path='/create/users' action={createApplicationAction}/>
             <Route path='/recruiters' element={<RecruiterStats />} />
             <Route path='/rapplications' element={<RecruiterIndex />} loader={postingLoader}/>
+            <Route path='/rapplications/:id' element={<ApplicationIndex isUser={false} />} loader={specificApplicationLoader} />
 
-            <Route path='/jsapplications' element={<ApplicationIndex />} loader={applicationsLoader}/>
+            <Route path='/jsapplications' element={<ApplicationIndex isUser={true} />} loader={applicationsLoader}/>
             <Route path='/jsapplications/:id/edit' loader={applicationLoader} element={<SeekerApplicationShow />} />
             <Route path='/jsapplications/:id/update' action={updateApplicationAction} />
         </Route>

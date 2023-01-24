@@ -1,5 +1,5 @@
 import { redirect } from "react-router-dom"
-const URL =  "https://job-board-backend-jryb.onrender.com"
+const URL =  "http://localhost:4567"
 
 export const createApplicationAction = async ({request}) => {
 

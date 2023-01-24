@@ -164,7 +164,16 @@ nav a{
   font-weight: bold;
 }
 
+/* Recruiter Index page specifics */
+.linkSection {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 16px;
+}
 
+.linkSection a{
+
+}
 
 
 @media only screen and (max-width: 1000px){

@@ -1,4 +1,4 @@
-const URL = "https://job-board-backend-jryb.onrender.com"
+const URL = "http://localhost:4567"
 
 export const postingLoader = async () => {
     const response = await fetch(URL + "/user")
@@ -22,4 +22,10 @@ export const applicationLoader = async({params}) => {
     const response = await fetch(`${URL}/recruit/${params.id}`);
     const application = await response.json()
     return application;
+}
+
+export const specificApplicationLoader = async ({params}) => {
+    const response = await fetch(URL + `/recruit?postID=` + params.id)
+    const applications = await response.json()
+    return applications;
 }
