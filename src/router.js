@@ -1,6 +1,8 @@
 import {createBrowserRouter, createRoutesFromElements, Route} from 'react-router-dom'
 import App from './App'
 import Index from './pages/Index';
+import RecruiterIndex from './pages/RecruiterIndex'
+import RecruiterStats from './pages/RecruiterStats'
 import Show from './pages/Show';
 import NewAppForm from './pages/NewAppForm';
 import ApplicationIndex from './pages/ApplicationIndex';
@@ -19,7 +21,9 @@ const router = createBrowserRouter(
             <Route path='/users/:id' element={<Show />} loader={postLoader} />
             <Route path='/users/:id/apply' element={<NewAppForm/>}/>
             <Route path='/create/users' action={createApplicationAction}/>
-            <Route path='/recruiters' />
+            <Route path='/recruiters' element={<RecruiterStats />} />
+            <Route path='/rapplications' element={<RecruiterIndex />} loader={postingLoader}/>
+
             <Route path='/jsapplications' element={<ApplicationIndex />} loader={applicationsLoader}/>
             <Route path='/jsapplications/:id/edit' loader={applicationLoader} element={<SeekerApplicationShow />} />
             <Route path='/jsapplications/:id/update' action={updateApplicationAction} />

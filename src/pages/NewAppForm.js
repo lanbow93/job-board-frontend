@@ -32,7 +32,7 @@ function NewAppForm(props){
             <textarea rows="10" cols="100" name="resume" value={formInfo.resume} onChange={event => setFormInfo({...formInfo, resume: event.target.value})}/>
             <input type="hidden" value={formInfo.id} name="postID" />
 
-            
+            {/* Whether or not form button is enabled */}
             {(formInfo.name && formInfo.email && formInfo.resume) ? <input type="submit" value="Submit Application"  /> : <input type="submit" value="Submit Application" disabled />}
 
             <p>Bolded Items are <span className="required">REQUIRED</span></p>

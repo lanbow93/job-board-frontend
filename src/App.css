@@ -41,8 +41,6 @@ nav a{
   font-size: 1.5rem;
 }
 
-.landing a{
-}
 /* Job Postings Index Styling */
 .jobCardHolder, .applicationHolder {
   display: grid;

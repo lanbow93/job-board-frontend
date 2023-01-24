@@ -9,18 +9,18 @@ function Nav(props){
             isSeeker=false;
             props.switchDetails({
                 homeUrl: "/recruiters",
-                homeText: "Applications Submitted",
+                homeText: "Posting Stats",
                 switchUrl: "/users",
                 switchText: "Job Seekers",
                 accessUrl: "/rapplications",
-                accessText: "Submitted Job Postings"
+                accessText: "Job Postings"
             })
             return redirect("/recruiters")
         } else {
             isSeeker=true;
             props.switchDetails({
                 homeUrl: "/users",
-                homeText: "Job Postings",
+                homeText: "Job Listings",
                 switchUrl: "/recruiters",
                 switchText: "Recruiters",
                 accessUrl: "/jsapplications",

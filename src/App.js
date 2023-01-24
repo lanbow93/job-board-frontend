@@ -7,7 +7,7 @@ function App() {
 
   const [pageDetails, setPageDetails] = useState({
     homeUrl: "/users",
-    homeText: "Job Postings",
+    homeText: "Job Listings",
     switchUrl: "/recruiters",
     switchText: "Recruiters",
     accessUrl: "/jsapplications",
